@@ -52,7 +52,7 @@ void serv_hash_initialise(hash_type* sh) {
   struct servent* ent;
   struct protoent* pent;
   ip_service* service;
-  setprotoent(1);
+  //setprotoent(1); // bionic c has no implement. by dove
   while((ent = getservent()) != NULL) {
     pent = getprotobyname(ent->s_proto);
     if(pent != NULL) {
@@ -62,5 +62,5 @@ void serv_hash_initialise(hash_type* sh) {
       hash_insert(sh, service, xstrdup(ent->s_name));
     }
   }
-  endprotoent();
+  //endprotoent(); // bionic c has no implement. by dove
 }

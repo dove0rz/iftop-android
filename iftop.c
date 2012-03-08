@@ -791,7 +791,7 @@ int main(int argc, char **argv) {
 
     ui_loop();
 
-    pthread_cancel(thread);
+    //pthread_cancel(thread); // bionic c have no pthread_cancel, by dove
 
     ui_finish();
     

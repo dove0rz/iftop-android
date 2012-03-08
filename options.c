@@ -120,7 +120,7 @@ void options_set_defaults() {
      * is up and is not lo or dummy*. */
     options.interface = get_first_interface();
     if (!options.interface)
-        options.interface = "eth0";
+        options.interface = "ppp0";
 
     options.filtercode = NULL;
     options.netfilter = 0;
@@ -140,7 +140,7 @@ void options_set_defaults() {
     options.promiscuous_but_choosy = 0;
 #endif
     options.showbars = 1;
-    options.showports = OPTION_PORTS_OFF;
+    options.showports = OPTION_PORTS_ON; // default to on by dove
     options.aggregate_src = 0;
     options.aggregate_dest = 0;
     options.paused = 0;
@@ -149,7 +149,8 @@ void options_set_defaults() {
     options.sort = OPTION_SORT_DIV2;
     options.screenfilter = NULL;
     options.freezeorder = 0;
-    options.linedisplay = OPTION_LINEDISPLAY_TWO_LINE;
+    //options.linedisplay = OPTION_LINEDISPLAY_TWO_LINE;
+    options.linedisplay = OPTION_LINEDISPLAY_ONE_LINE_BOTH;
     options.screen_offset = 0;
     options.show_totals = 0;
     options.max_bandwidth = 0; /* auto */

@@ -1077,7 +1077,7 @@ void ui_loop() {
                 dontshowdisplay = 0;
                 ui_print();
 #else
-                showhelp("Sorry, screen filters not supported on this platform")
+                showhelp("Sorry, screen filters not supported on this platform");
 #endif
                 break;
             }

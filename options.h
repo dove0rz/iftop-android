@@ -10,7 +10,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
-
+#include "if_nameindex.h"
 
 typedef enum {
   OPTION_PORTS_OFF,

@@ -403,7 +403,7 @@ char *do_resolve(struct addr_storage *addr) {
 void resolver_worker(void* ptr) {
 /*    int thread_number = *(int*)ptr;*/
     pthread_mutex_lock(&resolver_queue_mutex);
-    sethostent(1);
+    //sethostent(1); // bionic c has no sethostent... by dove
     while(1) {
         /* Wait until we are told that an address has been added to the 
          * queue. */

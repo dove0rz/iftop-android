@@ -9,6 +9,7 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
+#include <arpa/inet.h> // for in_addr_t by dove
 #include "hash.h"
 
 typedef struct {
